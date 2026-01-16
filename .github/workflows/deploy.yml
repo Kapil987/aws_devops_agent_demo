@@ -23,5 +23,5 @@ jobs:
       - name: Deploy Code
         uses: aws-actions/aws-lambda-deploy@v1
         with:
-          function-name: devops_agent1
+          function-name: mytest1
           code-artifacts-dir: ./src 
