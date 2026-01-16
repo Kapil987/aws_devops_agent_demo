@@ -25,3 +25,10 @@ jobs:
         with:
           function-name: mytest1
           code-artifacts-dir: ./src 
+      
+      - name: Set Runtime & Handler
+        run: |
+          aws lambda update-function-configuration \
+            --function-name mytest1 \
+            --runtime python3.11 \
+            --handler lambda_function.lambda_handler
